@@ -82,8 +82,7 @@ const NewDM = () => {
                             onChange={(e) => searchContacts(e.target.value)}
                         />
                     </div>
-
-                    <ScrollArea className='h-[250px]'>
+                    {searchContacts.length > 0 && (<ScrollArea className='h-[250px]'>
                         <div className='flex flex-col gap-5'>
                             {searchedContacts.map((contact) => (
                                 <div key={contact._id} className='flex gap-3 items-center cursor-pointer'
@@ -122,10 +121,12 @@ const NewDM = () => {
                                 </div>
                             ))}
                         </div>
-                    </ScrollArea>
+                    </ScrollArea>)
+                    }
+
 
                     {searchedContacts.length <= 0 && (
-                        <div className='flex-1 md:bg-[#1c1d25] md:flex mt-5 flex-col justify-center items-center duration-1000 transition-all'>
+                        <div className='flex-1 md:bg-[#1c1d25] md:flex mt-5 md:mt-0 flex-col justify-center items-center duration-1000 transition-all'>
                             <Lottie
                                 isClickToPauseDisabled={true}
                                 height={100}
