@@ -59,8 +59,16 @@ const MessageContainer = () => {
         })
     }
 
-    const downloadFile = (file) => {
-
+    const downloadFile = async (url) => {
+        const response = await apiClient.get(`${HOST}/${url}`, {responseType:"blob"})
+        const urlBlob = window.URL.createObjectURL(new Blob([response.data]))
+        const link = document.createElement("a")
+        link.href = urlBlob
+        link.setAttribute("download", url.split("/").pop())
+        document.body.appendChild(link)
+        link.click()
+        link.remove()
+        window.URL.revokeObjectURL(urlBlob)
     }
 
     const renderDMMessages = (message) =>(
