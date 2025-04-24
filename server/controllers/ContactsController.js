@@ -98,21 +98,21 @@ export const searchContacts = async (request, response, next) => {
     }
   };
 
-export const getAllContacts = async (request, response, next) => {
-  try {
-      const users = await User.find({_id:{$ne:request.userId}}, "firstName lastName _id")      
-      if (searchTerm === undefined || searchTerm === null) {
-          return response.status(400).send("searchTerm is required.")
-      }
-
+  export const getAllContacts = async (request, response, next) => {
+    try {
+      const users = await User.find(
+        { _id: { $ne: request.userId } },
+        "firstName lastName _id"
+      );
+  
       const contacts = users.map((user) => ({
-        label:user.firstName ? `${user.firstName} ${user.lastName}` : user.email,
-      }))
-
-      return response.status(200).json({contacts})
-
-  } catch (error) {
-    console.log({ error });
-    return response.status(500).send("Internal Server Error.");
-  }
-};
+        label: `${user.firstName} ${user.lastName}`,
+        value: user._id,
+      }));
+  
+      return response.status(200).json({ contacts });
+    } catch (error) {
+      console.log({ error });
+      return response.status(500).send("Internal Server Error.");
+    }
+  };
