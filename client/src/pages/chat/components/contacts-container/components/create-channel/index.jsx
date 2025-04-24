@@ -23,7 +23,7 @@ const CreateChannel = () => {
     const [newChannelModal, setNewChannelModal] = useState(false);
     const [allContacts, setAllContacts] = useState([])
     const [selectedContacts, setSelectedContacts] = useState([])
-    const [channelName, setChannelName] = useState([])
+    const [channelName, setChannelName] = useState("")
 
     useEffect(() => {
         const getData = async () => {
@@ -31,7 +31,7 @@ const CreateChannel = () => {
             setAllContacts(response.data.contacts)
         }
         getData()
-    })
+    }, [])
 
     const createChannel = async () => {
         try {

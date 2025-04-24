@@ -3,7 +3,7 @@ import { getColor } from "@/lib/utils";
 import { useAppStore } from "@/store";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
-const ContactList = ({ contacts, isChannel = false }) => {
+const ContactList = ({ contacts = [], isChannel = false }) => {
   const {
     selectedChatData,
     setSelectedChatType,
