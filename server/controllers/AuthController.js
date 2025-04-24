@@ -194,4 +194,4 @@ export const removeProfileImage = async (request, response, next) => {
       console.log({ error });
       return response.status(500).send("Internal Server Error.");
     }
-  };
+    };
