@@ -45,7 +45,8 @@ const Auth = () => {
         }
       } catch (error) {
         console.error(error);
-        toast.error(error.response?.data?.message || "Login failed.");
+        // Show backend error message directly to the user
+        toast.error(error.response?.data || error.response?.data?.message || "Login failed.");
       }
     }
   };
