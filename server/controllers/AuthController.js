@@ -20,8 +20,9 @@ export const signup = async (request, response, next) => {
         const user = await User.create({email, password});
         response.cookie("jwt", createToken(email, user.id), {
             maxAge,
-            secure:true,
-            sameSite: "None",
+            httpOnly: true,
+            secure: true,      // must be true for HTTPS in production
+            sameSite: "None",  // must be "None" for cross-site cookies
         });
         return response.status(201).json({user:{
             id:user.id,
@@ -55,9 +56,10 @@ export const login = async (request, response, next) => {
 
         response.cookie("jwt", createToken(email, user.id), {
             maxAge,
-            secure: false, // changed for local development
-            sameSite: "Lax", // changed for local development
-        })
+            httpOnly: true,
+            secure: true,      // must be true for HTTPS in production
+            sameSite: "None",  // must be "None" for cross-site cookies
+        });
 
         return response.status(200).json({user:{
             id:user.id,
