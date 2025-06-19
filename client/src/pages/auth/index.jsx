@@ -123,7 +123,7 @@ const Auth = () => {
               </Button>
             </TabsContent>
 
-            <TabsContent value="signup" className="mt-8 flex flex-col gap-4">
+            <TabsContent value="signup" className="mt-2 flex flex-col gap-4">
               <Input
                 placeholder="Email"
                 type="email"
