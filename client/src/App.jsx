@@ -7,10 +7,20 @@ import { useAppStore } from './store';
 import { apiClient } from './lib/api-client';
 import { GET_USER_INFO } from './utils/constants';
 
+const LoadingScreen = () => (
+  <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+    <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-purple-500 mb-6" />
+    <p className="text-lg sm:text-xl font-medium text-center px-6">
+      Just a moment... we're setting things up for you 💜
+    </p>
+  </div>
+);
+
+
 const PrivateRoute = ({ children, loading }) => {
   const { userInfo } = useAppStore();
 
-  if (loading) return null; // ⏳ Wait until user check is complete
+  if (loading) return <LoadingScreen />
 
   return userInfo ? children : <Navigate to="/auth" />;
 };
@@ -18,7 +28,7 @@ const PrivateRoute = ({ children, loading }) => {
 const AuthRoute = ({ children, loading }) => {
   const { userInfo } = useAppStore();
 
-  if (loading) return null;
+  if (loading) return <LoadingScreen />
 
   return userInfo ? <Navigate to="/chat" /> : children;
 };
