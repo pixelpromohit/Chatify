@@ -71,11 +71,11 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      <div className="w-[90vw] max-w-6xl h-[90vh] bg-gray-900 shadow-xl rounded-3xl overflow-hidden grid xl:grid-cols-2 border border-gray-700 text-white">
-        <div className="flex flex-col justify-center items-center p-10 gap-8">
+    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black px-4 overflow-y-auto">
+      <div className="w-full max-w-xl xl:max-w-4xl h-auto xl:h-[80vh] bg-gray-900 shadow-xl rounded-3xl overflow-hidden grid xl:grid-cols-2 border border-gray-700 text-white">
+        <div className="flex flex-col justify-center items-center p-6 sm:p-8 md:p-10 gap-6">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold flex items-center justify-center gap-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold flex items-center justify-center gap-2">
               Welcome
               <img src={Victory} alt="Victory" className="h-14" />
             </h1>
