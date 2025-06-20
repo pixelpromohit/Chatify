@@ -3,9 +3,8 @@
 Welcome to **Chatify**, a sleek and responsive chat application built with **MERN**.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pixelpromohit/chatify/main/client/src/assets/brave_screenshot_chatify-orpin-six.vercel.app%20(1).png" width="280" style="margin: 10px;" />
-  <img src="https://raw.githubusercontent.com/pixelpromohit/chatify/main/client/src/assets/Screenshot%202025-06-20%20113539.png" width="280" style="margin: 10px;" />
-  <img src="https://raw.githubusercontent.com/pixelpromohit/chatify/main/client/src/assets/brave_screenshot_chatify-orpin-six.vercel.app.png" width="280" style="margin: 10px;" />
+  <img src="https://raw.githubusercontent.com/pixelpromohit/chatify/main/client/src/assets/brave_screenshot_chatify-orpin-six.vercel.app%20(1).png" width="45%" style="margin: 10px;" />
+  <img src="https://raw.githubusercontent.com/pixelpromohit/chatify/main/client/src/assets/Screenshot%202025-06-20%20113539.png" width="45%" style="margin: 10px;" />
 </p>
 
 ## 🔗 Live Preview
