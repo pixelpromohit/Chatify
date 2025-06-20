@@ -18,7 +18,6 @@ Welcome to **Chatify**, a sleek and responsive chat application built with **MER
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white&style=for-the-badge" />
   <img src="https://img.shields.io/badge/Zustand-000000?logo=zustand&logoColor=white&style=for-the-badge" />
   <img src="https://img.shields.io/badge/ShadCN_UI-111827?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=white&style=for-the-badge" />
 </p>
 
 ### 🛠 Backend
